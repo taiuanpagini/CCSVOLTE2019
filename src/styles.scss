@@ -1,1 +1,336 @@
-/* You can add global styles to this file, and also import other style files */
+/* variaveis globais */
+$preto: #000000;
+$branco: #FFFFFF;
+$lightgray: #f6f6f6;
+$gray: #575756;
+
+// MIXINS
+@mixin transitionNormal {
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+}
+
+@mixin transitionOpacity {    
+    transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -webkit-transition: opacity .1s ease-in-out;
+    -o-transition: opacity .1s ease-in-out;
+}
+
+@mixin zoom {
+    -webkit-animation: zoom 1s ease;
+    -moz-animation: zoom 1s ease;
+    -o-animation: zoom 1s ease;
+    animation: zoom 1s ease;
+}
+
+body {
+    overflow-x: hidden;
+    background: $branco;
+    font-family: 'Montserrat', sans-serif;
+
+    .container-full {
+        padding: 0;
+    }
+
+    header {
+        img {
+            &.logo-topo {
+                max-width: 100%;
+                display: table;
+                margin: 130px auto 0;
+                position: absolute;
+                top: 0;
+                z-index: 9999;
+            }
+        }
+        position: relative;
+
+        .img-banner {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -960px;
+        }
+
+        h2 {
+            &.title-volte-sempre {
+                font-weight: 500;
+                font-size: 50pt;
+                color: $branco;
+                margin-top: 300px;
+                margin-bottom: 100px;
+
+                b {
+                    font-size: 55pt;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .countdown {
+            margin-bottom: 180px;
+
+            .measurements {
+                color: $branco;
+                margin: 0 30px;
+
+                p {
+                    font-weight: 400;
+                    font-size: 20pt;
+
+                    &.measurements-number {
+                        font-size: 80pt;
+                        font-weight: 900;
+                        margin-bottom: 0;
+                        line-height: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        h2 {
+            &.title-news {
+                margin: 100px 0;
+                font-weight: 600;
+                font-size: 60px;
+                b {
+                    font-weight: 900;
+                }
+            }
+        }
+
+        form {
+            margin: 0 0 100px;
+
+            .input-group-text {
+                background: $preto;
+                border: 1px solid $preto;
+                color: $branco;
+                font-size: 2rem;
+            }
+
+            input[type=email] {
+                height: 80px;
+                border: 1px solid $preto;
+                border-radius: 0;
+
+                &.is-invalid {
+                    border: 1px solid red;
+                }
+            }
+
+            button {
+                background: $preto !important;
+                border: 1px solid $preto !important;
+                height: 80px;
+                border-radius: 0;
+            }
+        }
+
+        .galeria {
+            margin-bottom: 80px;
+            .grid {
+                width: 100%;
+            }
+
+            /* reveal grid after images loaded */
+            .grid.are-images-unloaded {
+                opacity: 0;
+            }
+
+            .grid__item,
+            .grid__col-sizer {
+                width: 32%;
+                overflow: hidden;
+            }
+
+            .grid__gutter-sizer {
+                width: 2%;
+            }
+
+            /* hide by default */
+            .grid.are-images-unloaded .image-grid__item {
+                opacity: 0;
+            }
+
+            .grid__item {
+                margin-bottom: 20px;
+                float: left;
+            }
+
+            .grid__item--height1 {
+                height: 140px;
+                background: #EA0;
+            }
+
+            .grid__item--height2 {
+                height: 220px;
+                background: #C25;
+            }
+
+            .grid__item--height3 {
+                height: 300px;
+                background: #19F;
+            }
+
+            .grid__item--width2 {
+                width: 66%;
+            }
+
+            .grid__item img {
+                display: block;
+                max-width: 100%;
+            }
+
+            .page-load-status {
+                display: none; /* hidden by default */
+                padding-top: 20px;
+                border-top: 1px solid #DDD;
+                text-align: center;
+                color: #777;
+            }
+
+            .loader-ellips {
+                font-size: 20px; /* change size here */
+                position: relative;
+                width: 4em;
+                height: 1em;
+                margin: 10px auto;
+            }
+
+            .loader-ellips__dot {
+                display: block;
+                width: 1em;
+                height: 1em;
+                border-radius: 0.5em;
+                background: #555; /* change color here */
+                position: absolute;
+                animation-duration: 0.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    left: 0;
+                }
+
+                &:nth-child(3) {
+                    left: 1.5em;
+                }
+
+                &:nth-child(4) {
+                    left: 3em;
+                }
+
+                &:nth-child(1) {
+                    animation-name: reveal;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    animation-name: slide;
+                }
+
+                &:nth-child(4) {
+                    animation-name: reveal;
+                    animation-direction: reverse;
+                }
+            }
+
+            @keyframes reveal {
+                from {
+                    transform: scale(0.001);
+                }
+
+                to {
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes slide {
+                to {
+                    transform: translateX(1.5em);
+                }
+            }
+        }
+    }
+    footer {
+        .parceiros {
+            padding: 100px 0;
+            background: $lightgray;
+            .row {
+                margin-top: 50px;
+                &:first-child {
+                    margin-top: 0;
+                }
+                .col-xl-2.col-lg-2.col-md-3.col-sm-4.col-4 {
+                    height: 88px;
+                }
+            }
+            h2 {
+                color: $gray;
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 20px;
+                line-height: 68px;
+            }
+            img {
+                margin: 0 auto;
+                max-width: 80%;
+                display: table;
+                &.itaipava {
+                    max-width: 140%;
+                }
+                &:hover {
+                    @include zoom();
+                }
+            }
+        }
+        .copyright {
+            padding: 30px;
+            color: $branco;
+            background: $preto;
+            h2 {
+                font-size: 16px;
+                color: $branco;
+                font-weight: 400;
+                line-height: 75px;
+            }
+            a {
+                color: $branco;
+                img {
+                    max-width: 60%;
+                }
+                &:hover {
+                    text-decoration: none;
+                    img {
+                        @include zoom();
+                    }
+                }
+            }
+        }
+    }
+}
+
+.grid ng-masonry-grid-item { 
+    width: calc(98.5% / 3) !important;
+}
+
+.grid ng-masonry-grid-item a, .grid ng-masonry-grid-item img {
+    max-width: inherit;
+    width: 100%;
+}
+
+.lb-nav a.lb-next,
+.lb-nav a.lb-prev {
+    opacity: 1 !important;
+}
+
+.grid {
+    margin-bottom: 70px !important;
+}

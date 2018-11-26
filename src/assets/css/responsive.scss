@@ -1,0 +1,155 @@
+@media screen and (max-width: 1900px) {
+    .grid ng-masonry-grid-item {
+        width: calc(98.5% / 3) !important;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .grid ng-masonry-grid-item {
+        width: calc(98% / 3) !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body header h2.title-volte-sempre {
+        font-size: 38pt;
+        b {
+            font-size: 42pt;
+        }
+    }
+    body main h2.title-news {
+        font-size: 21pt;
+    }
+    body main h2.title-news {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .grid ng-masonry-grid-item {
+        width: calc(97.5% / 3) !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    body header h2.title-volte-sempre {
+        font-size: 32pt;
+        b {
+            font-size: 34pt;
+        }
+    }
+    body main h2.title-news {
+        font-size: 40pt;
+    }
+    body main .brick .item-grid {
+        max-width: 94%;
+    }
+    body footer .parceiros img.itaipava {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .grid ng-masonry-grid-item {
+        width: calc(97% / 3) !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid ng-masonry-grid-item {
+        width: calc(96.5% / 3) !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body header h2.title-volte-sempre {
+        font-size: 26pt;
+    }
+    body main h2.title-news {
+        font-size: 22pt;
+    }
+    body header .countdown .measurements p.measurements-number {
+        font-size: 58pt;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .grid ng-masonry-grid-item {
+        width: calc(98% / 2) !important;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    body main h2.title-news {
+        font-size: 31pt;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .grid ng-masonry-grid-item {
+        width: calc(97% / 2) !important;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    body header .countdown .measurements p.measurements-number {
+        font-size: 38pt;
+        line-height: 50px;    
+    }
+    body header .countdown .measurements p {
+        font-size: 15pt;    
+    }
+    body header .countdown .measurements {
+        margin: 0 15px;    
+    }
+    body main h2.title-news {
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    body header img.logo-topo {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    .grid ng-masonry-grid-item {
+        width: calc(96% / 2) !important;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    body main h2.title-news {
+        font-size: 25pt;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body header h2.title-volte-sempre {
+        font-size: 18pt;
+        b {
+            font-size: 29pt;    
+        }
+    }
+    body header .countdown .measurements {
+        margin: 0 10px;    
+    }
+    body header .countdown .measurements p.measurements-number {
+        font-size: 32pt;
+        line-height: 50px;    
+    }
+    body header .countdown .measurements p {
+        font-size: 13pt;    
+    }
+}
+
+@media screen and (max-width: 390px) {
+    body main h2.title-news {
+        font-size: 21pt;
+    }
+    body header img.logo-topo {
+        margin-top: 30px;
+    }
+}

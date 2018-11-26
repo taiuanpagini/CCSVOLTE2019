@@ -1,0 +1,145 @@
+<header>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
+        <img src="assets/images/logo-topo.png" class="img-fluid logo-topo justify-content-center" alt="">
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col">
+        <countdown (reached)="callback($event)" [text]="text" units="Days | Hours | Minutes | Seconds" end="November 16, 2019"
+          class="text-center"></countdown>
+      </div>
+    </div> -->
+  </div>
+  <div class="container-fluid container-full">
+    <ngb-carousel *ngIf="images" [showNavigationIndicators]="showNavigationIndicators">
+      <ng-template ngbSlide *ngFor="let image of this.images">
+        <img [src]="image" class="img-fluid" alt="Caldas Coutry 2018">
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h2 class="text-center title-news">
+          Obrigado Brasil! <br>
+          <b>Te esperamos em 2019</b>
+        </h2>
+      </div>
+    </div>
+    <!-- <div class="row justify-content-center">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <form #form="ngForm">
+          <div class="form-row justify-content-center">
+            <div class="col-xl-5 col-lg-5 col-md-7 col-sm-8 col-8">
+              <label class="sr-only" for="inlineFormInputGroup">E-mail</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">@</div>
+                </div>
+                <input type="email" name="email" class="form-control" placeholder="E-mail" required [(ngModel)]="model.email"
+                  #email="ngModel" [ngClass]="{ 'is-invalid': form.submitted && email.invalid }">
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+              <button type="submit" class="btn btn-primary" (click)="enviarEmail(form)">Cadastrar E-mail</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div> -->
+  </div>
+  <div class="container-fluid masonry">
+    <div class="row">
+      <div class="col">
+        <ng-masonry-grid [masonryOptions]="{ gutter: 10 }" [useImagesLoaded]="true">
+          <ng-masonry-grid-item id="{{'masonry-item-'+i}}" *ngFor="let image of _album; let i=index;">
+            <img [src]="image.src" class="img-fluid item-grid" (click)="open(i)">
+          </ng-masonry-grid-item>
+        </ng-masonry-grid>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <section class="parceiros">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+              <h2>Patrocínio</h2>
+            </div>
+            <div class="offset-xl-4 offset-lg-4 offset-md-3 offset-sm-2 col-xl-4 col-lg-4 col-md-6 col-sm-8 col-12">
+              <a href="http://www.cervejaitaipava.com.br/" target="_blank">
+                <img src="assets/images/parceiros/logo-itaipava-site.png" alt="" class="itaipava img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+          <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                  <h2>Realização</h2>
+                </div>
+                <div class="offset-xl-4 offset-lg-4 offset-md-3 offset-sm-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                  <a href="http://www.gbmproducoes.com.br/" target="_blank">
+                    <img src="assets/images/parceiros/logo-gbm.png" alt="" class="itaipava img-fluid">
+                  </a>
+                </div>
+          </div>          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+          <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                  <h2>Produção</h2>
+                </div>
+                <div class="offset-xl-4 offset-lg-4 offset-md-3 offset-sm-2 col-xl-4 col-lg-4 col-md-6 col-sm-8 col-12">
+                  <a href="http://www.gbmproducoes.com.br/" target="_blank">
+                    <img src="assets/images/parceiros/parcerias-produz.png" alt="" class="itaipava img-fluid">
+                  </a>
+                </div>
+          </div>          
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+          <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                  <h2>Agências</h2>
+                </div>
+                <div class="offset-xl-2 offset-lg-2 offset-md-1 col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12">
+                  <a href="http://www.gbmproducoes.com.br/" target="_blank">
+                    <img src="assets/images/parceiros/befour.png" alt="" class="itaipava img-fluid">
+                  </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12">
+                  <a href="http://www.gbmproducoes.com.br/" target="_blank">
+                    <img src="assets/images/parceiros/2polegadas.png" alt="" class="itaipava img-fluid">
+                  </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="copyright">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-xl-auto col-lg-auto col-md-auto col-sm-12 col-12">
+          <h2>® Todos os direitos reservados. Caldas Country Show 2018.</h2>
+        </div>
+        <div class="col-xl-auto col-lg-auto col-md-auto col-sm-12 col-12">
+          <a href="http://duaspolegadas.com" title="Agencia 2 Polegadas" target="_blank">Site por
+            <img src="assets/images/2polegadas.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
